@@ -14,10 +14,13 @@
 		"@pinia/nuxt": "^0.5.1",
 		"nuxt": "^3.11.2",
 		"pinia": "^2.1.7",
+		"primevue": "^3.52.0",
 		"vue": "^3.4.27",
 		"vue-router": "^4.3.2"
 	},
 	"devDependencies": {
+		"@nuxtbase/auth-ui-vue": "^0.3.7",
+		"@supabase/auth-ui-shared": "^0.1.8",
 		"autoprefixer": "^10.4.19",
 		"nuxt-primevue": "^0.3.1",
 		"postcss": "^8.4.38",

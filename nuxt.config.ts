@@ -12,7 +12,11 @@ export default defineNuxtConfig({
 		},
 	},
 	modules: ['@pinia/nuxt', 'nuxt-primevue', '@nuxtjs/supabase'],
-	css: ['@/app/styles/tailwind.css', 'primevue/resources/themes/aura-light-green/theme.css'],
+	css: [
+		'@/app/styles/tailwind.css',
+		'@/app/styles/overwrites.css',
+		'primevue/resources/themes/aura-light-green/theme.css',
+	],
 	postcss: {
 		plugins: {
 			tailwindcss: {},

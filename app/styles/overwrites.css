@@ -1,0 +1,3 @@
+.supabase-auth-ui_ui-input {
+	@apply !text-foreground;
+}
