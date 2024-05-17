@@ -1,5 +1,9 @@
+<script setup lang="ts">
+	import { FavouritesForm } from '@/widgets/FavouritesForm';
+</script>
+
 <template>
 	<div>
-		<h1 class="text-center text-4xl font-medium">Favourites Page</h1>
+		<FavouritesForm />
 	</div>
 </template>

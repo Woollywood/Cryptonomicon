@@ -11,6 +11,12 @@ export default defineNuxtConfig({
 			],
 		},
 	},
+	runtimeConfig: {
+		public: {
+			cryptocompareApiKey: process.env.CRYPTOCOMPARE_API_KEY,
+			cryptocompareBaseUrl: process.env.CRYPTOCOMPARE_BASE_URL,
+		},
+	},
 	modules: ['@pinia/nuxt', 'nuxt-primevue', '@nuxtjs/supabase'],
 	css: [
 		'@/app/styles/tailwind.css',

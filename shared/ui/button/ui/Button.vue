@@ -13,6 +13,9 @@
 
 <template>
 	<Button :pt="styles" v-bind="props">
+		<template #icon>
+			<slot name="icon" />
+		</template>
 		<template #loadingicon>
 			<LoadingSpinner class="aspect-square !h-full !w-[1em]" />
 		</template>
