@@ -4,5 +4,6 @@ export const navLinks: NavLinkType[] = [
 	{
 		to: '/favourites',
 		label: 'Избранные',
+		requiredAuth: true,
 	},
 ];
