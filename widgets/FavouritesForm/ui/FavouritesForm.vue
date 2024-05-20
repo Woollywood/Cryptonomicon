@@ -3,10 +3,15 @@
 	import FavouritesFormToggler from './FavouritesFormToggler.vue';
 	import InputText from 'primevue/inputtext';
 	import FloatLabel from 'primevue/floatlabel';
-	import { Button } from '@/shared/ui/button';
+	import { FavouritesAdd } from '@/features/favourites/add';
 
 	const opened = ref(false);
 	const cryptoCurrencyName = ref('');
+
+	function complete() {
+		cryptoCurrencyName.value = '';
+		opened.value = false;
+	}
 </script>
 
 <template>
@@ -18,11 +23,7 @@
 					<InputText class="w-[320px]" id="cryptoCurrencyName" v-model="cryptoCurrencyName" />
 					<label for="cryptoCurrencyName">Введите название криптовалюты</label>
 				</FloatLabel>
-				<Button label="Добавить">
-					<template #icon>
-						<i class="fa-solid fa-plus"></i>
-					</template>
-				</Button>
+				<FavouritesAdd :currency-name="cryptoCurrencyName" @complete="complete" />
 			</div>
 		</Sidebar>
 	</div>

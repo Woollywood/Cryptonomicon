@@ -17,7 +17,9 @@
 			<slot name="icon" />
 		</template>
 		<template #loadingicon>
-			<LoadingSpinner class="aspect-square !h-full !w-[1em]" />
+			<div class="flex items-center justify-center">
+				<LoadingSpinner class="aspect-square !h-full !w-[1em]" />
+			</div>
 		</template>
 	</Button>
 </template>

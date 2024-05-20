@@ -15,6 +15,7 @@ export default defineNuxtConfig({
 		public: {
 			cryptocompareApiKey: process.env.CRYPTOCOMPARE_API_KEY,
 			cryptocompareBaseUrl: process.env.CRYPTOCOMPARE_BASE_URL,
+			cryptocompareWsBaseUrl: process.env.CRYPTOCOMPARE_WS_BASE_URL,
 		},
 	},
 	modules: ['@pinia/nuxt', 'nuxt-primevue', '@nuxtjs/supabase'],

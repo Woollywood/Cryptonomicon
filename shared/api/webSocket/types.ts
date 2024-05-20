@@ -1,0 +1,49 @@
+export enum CHANNEL_TYPES {
+	TRADE = '0',
+	EXCHANGE = '2',
+	AGGREGATE_INDEX = '5',
+	ORDER_BOOK_L2 = '8',
+	FULL_VOLUME = '11',
+	FULL_TOP_TIER_VOLUME = '21',
+	OHLC_CANDLES = '24',
+	TOP_OF_ORDER_BOOK = '30',
+}
+
+export enum MESSAGE_TYPES {
+	STREAMERWELCOME = '20',
+	SUBSCRIBECOMPLETE = '16',
+	LOADCOMPLETE = '3',
+	UNSUBSCRIBECOMPLETE = '17',
+	UNSUBSCRIBEALLCOMPLETE = '18',
+	HEARTBEAT = '999',
+	UNAUTHORIZED = '401',
+	RATE_LIMIT_OPENING_SOCKETS_TOO_FAST = '429',
+	ANOTHER_ERROR = '500',
+}
+
+export type ResponseBaseType = {
+	TYPE: CHANNEL_TYPES | MESSAGE_TYPES;
+};
+
+export type AggregateIndexResponseType = {
+	CIRCULATINGSUPPLYMKTCAP: number;
+	CURRENTSUPPLYMKTCAP: number;
+	FLAGS: number;
+	FROMSYMBOL: string;
+	LASTTRADEID: string;
+	LASTUPDATE: number;
+	LASTVOLUME: number;
+	LASTVOLUMETO: number;
+	MARKET: string;
+	MAXSUPPLYMKTCAP: number;
+	MEDIAN: number;
+	PRICE: number;
+	TOSYMBOL: string;
+	TYPE: 5;
+	VOLUME24HOUR: number;
+	VOLUME24HOURTO: number;
+	VOLUMEDAY: number;
+	VOLUMEDAYTO: number;
+	VOLUMEHOUR: number;
+	VOLUMEHOURTO: number;
+};
