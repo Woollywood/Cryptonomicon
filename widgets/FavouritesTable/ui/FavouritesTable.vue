@@ -17,7 +17,6 @@
 			subscribeToUpdate(currencyName, updateCurrency);
 		});
 	} catch (error: any) {
-		console.log(error);
 		handleError(error);
 	}
 

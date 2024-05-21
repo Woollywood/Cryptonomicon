@@ -14,8 +14,6 @@
 	const favouritesStore = useFavouritesStore();
 
 	async function clickHandler() {
-		console.log(props.currencyName);
-
 		isPending.value = true;
 		try {
 			await deleteCurrency(props.currencyName);

@@ -103,3 +103,19 @@ export type CurrencySymbolResponse = {
 };
 
 export type CurrencySymbolType = Record<string, CurrencySymbolResponse>;
+
+export type AvailableCurrencyType = {
+	id: number;
+	symbol: string;
+	partner_symbol: string;
+	data_available_from: number;
+};
+
+export type AvailableCurrencyListResponseType = {
+	Response: string;
+	Message: string;
+	HasWarning: boolean;
+	Type: number;
+	RateLimit: Object;
+	Data: AvailableCurrencyType[];
+};

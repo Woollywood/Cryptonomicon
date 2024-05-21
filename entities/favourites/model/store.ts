@@ -6,8 +6,6 @@ export const useFavouritesStore = defineStore('favourites', () => {
 	const favourites = ref<CurrencySymbolType[]>([]);
 
 	function deleteFavourite(currencyName: string) {
-		console.log(currencyName);
-
 		favourites.value = favourites.value.filter((item) => item[getKey(item)].raw.FROMSYMBOL !== currencyName);
 	}
 
@@ -19,7 +17,9 @@ export const useFavouritesStore = defineStore('favourites', () => {
 		favourites.value = items;
 	}
 
-	const getFavourites = computed(() => favourites.value);
+	const getFavourites = computed(() => {
+		return favourites.value;
+	});
 
 	return { getFavourites, shiftFavourite, setFavourites, deleteFavourite };
 });
