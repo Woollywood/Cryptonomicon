@@ -28,7 +28,12 @@
 </script>
 
 <template>
-	<Button label="Удалить" @click="clickHandler" :loading="isPending">
+	<Button class="hidden md:inline-flex" label="Удалить" @click="clickHandler" :loading="isPending">
+		<template #icon>
+			<i class="fa-solid fa-minus"></i>
+		</template>
+	</Button>
+	<Button class="!md:gap-2 inline-flex !gap-0 md:hidden" @click="clickHandler" :loading="isPending">
 		<template #icon>
 			<i class="fa-solid fa-minus"></i>
 		</template>
