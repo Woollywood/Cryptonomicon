@@ -16,14 +16,14 @@
 
 <template>
 	<div class="flex items-center justify-between">
-		<div class="flex items-center gap-4">
+		<div class="flex items-center gap-2 md:gap-4">
 			<Avatar
 				:image="`https://www.cryptocompare.com${currencySymbol.display.IMAGEURL}`"
 				size="large"
 				shape="circle" />
-			<h2 class="text-lg font-medium">{{ currencySymbol.raw.FROMSYMBOL }}</h2>
+			<h2 class="text-base font-medium md:text-lg">{{ currencySymbol.raw.FROMSYMBOL }}</h2>
 		</div>
-		<div>{{ formattedPrice }}</div>
+		<div class="text-sm md:text-base">{{ formattedPrice }}</div>
 		<FavouritesDelete :currency-name="currencySymbol.raw.FROMSYMBOL" />
 	</div>
 </template>

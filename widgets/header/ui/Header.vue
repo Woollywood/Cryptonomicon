@@ -9,8 +9,8 @@
 <template>
 	<header class="py-6">
 		<div class="container flex items-center justify-between">
-			<NuxtLink to="/" class="text-4xl font-medium hover:underline">Лого</NuxtLink>
-			<div class="flex items-center gap-8">
+			<NuxtLink to="/" class="text-3xl font-medium hover:underline md:text-4xl">Лого</NuxtLink>
+			<div class="flex items-center gap-4 md:gap-8">
 				<NavBar />
 				<Profile v-if="supabaseUser" />
 				<NuxtLink v-else to="/sign-in">

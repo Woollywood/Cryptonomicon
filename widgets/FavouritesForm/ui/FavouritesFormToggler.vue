@@ -10,7 +10,7 @@
 
 <template>
 	<Teleport to="body">
-		<Button rounded class="fixed bottom-12 right-12 z-50" @click="toggle">
+		<Button rounded class="fixed bottom-4 right-4 z-50 md:bottom-12 md:right-12" @click="toggle">
 			<template #icon>
 				<i class="fa-solid fa-plus"></i>
 			</template>
