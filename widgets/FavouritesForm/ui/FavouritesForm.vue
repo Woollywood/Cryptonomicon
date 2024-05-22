@@ -3,9 +3,8 @@
 	import FavouritesFormToggler from './FavouritesFormToggler.vue';
 	import InputText from 'primevue/inputtext';
 	import FloatLabel from 'primevue/floatlabel';
-	import { FavouritesAdd, ValidationError, ErrorType } from '@/features/favourites/add';
+	import { FavouritesAdd, ValidationError } from '@/features/favourites/add';
 	import ClueForm from './ClueForm.vue';
-	import { LoadingSpinner } from '@/shared/ui/spinner';
 
 	const opened = ref(false);
 	const error = ref<ValidationError | null>(null);
@@ -46,20 +45,13 @@
 	<div>
 		<FavouritesFormToggler v-model="opened" />
 		<Sidebar v-model:visible="opened" class="w-[420px]">
-			<form class="flex h-full flex-col items-center justify-center gap-6" @submit.prevent="submit">
+			<form @submit.prevent="submit" class="flex h-full flex-col items-center justify-center gap-6">
 				<div class="space-y-2">
 					<FloatLabel>
-						<InputText class="w-[320px]" id="cryptoCurrencyName" v-model="cryptoCurrencyName" />
+						<InputText class="w-[320px]" id="cryptoCurrencyName" v-model="cryptoCurrencyName" autofocus />
 						<label for="cryptoCurrencyName">Введите название криптовалюты</label>
 					</FloatLabel>
-					<Suspense>
-						<ClueForm :printed-currency-name="validateCurrencyName" ref="clueForm" @click="clueClick" />
-						<template #fallback>
-							<div class="flex items-center justify-center">
-								<LoadingSpinner class="!border-background !border-b-transparent" />
-							</div>
-						</template>
-					</Suspense>
+					<ClueForm :printed-currency-name="validateCurrencyName" ref="clueForm" @click="clueClick" />
 					<h3 v-if="error" class="text-sm font-medium text-red-500">{{ error.message }}</h3>
 				</div>
 				<FavouritesAdd
